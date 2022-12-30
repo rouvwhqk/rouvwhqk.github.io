@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  <icon>http://example.com/icon.png</icon>
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-12-22T14:12:32.821Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/12/30/hello-world/"/>
+    <id>http://example.com/2022/12/30/hello-world/</id>
+    <published>2022-12-30T01:13:16.123Z</published>
+    <updated>2022-12-22T14:12:32.821Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Windows软件快速下载</title>
+    <link href="http://example.com/2022/12/28/Windows%E8%BD%AF%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://example.com/2022/12/28/Windows%E8%BD%AF%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD/</id>
+    <published>2022-12-28T00:53:46.000Z</published>
+    <updated>2022-12-30T02:36:17.636Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Windows软件快速下载列表，主要都是自己会用到的一些软件。&lt;/p&gt;
+&lt;h2 id=&quot;系统维护类&quot;&gt;&lt;a href=&quot;#系统维护类&quot; class=&quot;headerlink&quot; title=&quot;系统维护类&quot;&gt;&lt;/a&gt;系统维护类&lt;/h2&gt;&lt;h3 id=&quot;驱动下载&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="software" scheme="http://example.com/tags/software/"/>
+    
+  </entry>
+  
+</feed>
