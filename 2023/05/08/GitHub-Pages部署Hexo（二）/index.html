@@ -11,7 +11,7 @@
   
   <title>
     
-      Archives 
+      GitHub_Pages部署Hexo（二） 
       
       
       |
@@ -106,75 +106,159 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">GitHub_Pages部署Hexo（二）</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-05-08 10:57:40
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/blog/" title="blog">
+                    #blog
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="1-为Hexo博客配置主题"><a href="#1-为Hexo博客配置主题" class="headerlink" title="1 为Hexo博客配置主题"></a>1 为Hexo博客配置主题</h1><h2 id="1-1-初始配置主题"><a href="#1-1-初始配置主题" class="headerlink" title="1.1 初始配置主题"></a>1.1 初始配置主题</h2><ol>
+<li><p>安装主题。</p>
+<p>对于orange：<strong>cd</strong>到<strong>博客根目录</strong>，使用<code>git bash</code>或终端输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges</span><br></pre></td></tr></table></figure>
+
+<p>oranges主题仓库：<a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">https://github.com/zchengsite/hexo-theme-oranges</a></p>
+</li>
+<li><p><em>使用主题（对于oranges主题）：</em></p>
+<p>在Hexo<strong>博客根目录</strong>下找到<code>_config.yml</code>文件，修改其中<code>theme</code>字段为主题名<code>oranges</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">oranges</span></span><br></pre></td></tr></table></figure>
+
+<p>对于orange的主题配置，需要复制主题文件夹下的<code>_config.yml</code>文件到博客根目录并改名为<code>_config.oranges.yml</code>，后续修改主题操作均在<code>_config.oranges.yml</code>中进行。</p>
+<p>更多主题配置请参考oranges主题仓库：<a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">https://github.com/zchengsite/hexo-theme-oranges</a></p>
+</li>
+<li><p>1</p>
+</li>
+<li><p>2</p>
+</li>
+</ol>
+<h2 id="1-2-定制主题（适用于oranges主题）"><a href="#1-2-定制主题（适用于oranges主题）" class="headerlink" title="1.2 定制主题（适用于oranges主题）"></a>1.2 定制主题（适用于oranges主题）</h2><h1 id="2-开始用Hexo写作"><a href="#2-开始用Hexo写作" class="headerlink" title="2 开始用Hexo写作"></a>2 开始用Hexo写作</h1>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/05/07/hello-world/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-05-08 10:57:40
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/blog/" title="blog">
+                        #blog
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="GitHub_Pages部署Hexo（二）">
-        <div class="time-m-d">05-08</div>
-        <div class="title">
-          <a href="/2023/05/08/GitHub-Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/">
-            <span>GitHub_Pages部署Hexo（二）</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">05-07</div>
-        <div class="title">
-          <a href="/2023/05/07/hello-world/">
-            <span>Hello World</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="使用MAA连接安卓手机自动刷取明日方舟活动">
-        <div class="time-m-d">03-12</div>
-        <div class="title">
-          <a href="/2023/03/12/%E4%BD%BF%E7%94%A8MAA%E8%BF%9E%E6%8E%A5%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%88%B7%E5%8F%96%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%B4%BB%E5%8A%A8/">
-            <span>使用MAA连接安卓手机自动刷取明日方舟活动</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="GitHub Pages部署Hexo">
-        <div class="time-m-d">12-30</div>
-        <div class="title">
-          <a href="/2022/12/30/GitHub_Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%B8%80%EF%BC%89/">
-            <span>GitHub Pages部署Hexo</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="toc-text">1 为Hexo博客配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="toc-text">1.1 初始配置主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%AE%9A%E5%88%B6%E4%B8%BB%E9%A2%98%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8Eoranges%E4%B8%BB%E9%A2%98%EF%BC%89"><span class="toc-text">1.2 定制主题（适用于oranges主题）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%BC%80%E5%A7%8B%E7%94%A8Hexo%E5%86%99%E4%BD%9C"><span class="toc-text">2 开始用Hexo写作</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="Windows软件快速下载">
-        <div class="time-m-d">12-28</div>
-        <div class="title">
-          <a href="/2022/12/28/Windows%E8%BD%AF%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD/">
-            <span>Windows软件快速下载</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -429,6 +513,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + GitHub_Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%BA%8C%EF%BC%89 + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F05%2F08%2FGitHub-Pages%25E9%2583%25A8%25E7%25BD%25B2Hexo%25EF%25BC%2588%25E4%25BA%258C%25EF%25BC%2589%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/05/08/GitHub-Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
