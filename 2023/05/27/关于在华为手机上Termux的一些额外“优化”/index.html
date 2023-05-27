@@ -11,7 +11,7 @@
   
   <title>
     
-      Archives 
+      关于在华为手机上Termux的一些额外“优化” 
       
       
       |
@@ -109,102 +109,151 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">关于在华为手机上Termux的一些额外“优化”</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-05-27 22:11:20
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E7%8E%A9%E6%9C%BA%EF%BC%8CTermux/" title="玩机，Termux">
+                    #玩机，Termux
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="1-华为杀后台"><a href="#1-华为杀后台" class="headerlink" title="1 华为杀后台"></a>1 华为杀后台</h1><p>虽然在安卓上无root保持一个APP不掉后台不是什么明智之举，但依然可以找到一些方法来相对调解。<del>（有root的同学大概可以轻松解决这个问题罢）</del></p>
+<h2 id="1-1-后台宽容"><a href="#1-1-后台宽容" class="headerlink" title="1.1 后台宽容"></a>1.1 后台宽容</h2><p>通过更改安卓设备的“后台运行”，“自启动”，“耗电管理”等设置来宽容Termux后台运行。</p>
+<h2 id="1-2-保持前台运行"><a href="#1-2-保持前台运行" class="headerlink" title="1.2 保持前台运行"></a>1.2 保持前台运行</h2><p>它杀后台，那我就一直保持前台。<br>使用软件保持屏幕常亮，termux处于前台运行。这里推荐两个APP：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.coolapk.com/apk/com.zhao.fakesleep">息屏挂机</a><br>这个软件允许在屏幕叠加一个纯黑的遮罩，配合安卓系统设置使用，可以达到省电亮屏的效果。</li>
+<li><a target="_blank" rel="noopener" href="https://f-droid.org/zh_Hans/packages/com.github.muellerma.coffee/">咖啡 Coffee</a><br>这个软件“<em>提供一个磁块，使您可以保持屏幕常亮，而无需更改设备设置。</em>”</li>
+</ol>
+<h1 id="2-安卓VNC软件"><a href="#2-安卓VNC软件" class="headerlink" title="2 安卓VNC软件"></a>2 安卓VNC软件</h1><ol>
+<li>RealVNC的<strong>VNC Viewer</strong><br>这个也许是最常用的VNC安卓APP<br>需要请自行搜索，不提供链接</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gujjwal00/avnc">AVNC</a><br>开源免费，简约而不简单的VNC APP</li>
+</ol>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/05/27/Remmina%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85VNC%E8%BF%9E%E6%8E%A5/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-05-27 22:11:20
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E7%8E%A9%E6%9C%BA%EF%BC%8CTermux/" title="玩机，Termux">
+                        #玩机，Termux
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="关于在华为手机上Termux的一些额外“优化”">
-        <div class="time-m-d">05-27</div>
-        <div class="title">
-          <a href="/2023/05/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E4%B8%8ATermux%E7%9A%84%E4%B8%80%E4%BA%9B%E9%A2%9D%E5%A4%96%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D/">
-            <span>关于在华为手机上Termux的一些额外“优化”</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="Remmina局域网内VNC连接">
-        <div class="time-m-d">05-27</div>
-        <div class="title">
-          <a href="/2023/05/27/Remmina%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85VNC%E8%BF%9E%E6%8E%A5/">
-            <span>Remmina局域网内VNC连接</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="旧机荣耀9折腾之termux实现archLinux">
-        <div class="time-m-d">05-27</div>
-        <div class="title">
-          <a href="/2023/05/27/%E6%97%A7%E6%9C%BA%E8%8D%A3%E8%80%809%E6%8A%98%E8%85%BE%E4%B9%8Btermux%E5%AE%9E%E7%8E%B0archLinux/">
-            <span>旧机荣耀9折腾之termux实现archLinux</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="GitHub_Pages部署Hexo（二）">
-        <div class="time-m-d">05-08</div>
-        <div class="title">
-          <a href="/2023/05/08/GitHub-Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/">
-            <span>GitHub_Pages部署Hexo（二）</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">05-07</div>
-        <div class="title">
-          <a href="/2023/05/07/hello-world/">
-            <span>Hello World</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="使用MAA连接安卓手机自动刷取明日方舟活动">
-        <div class="time-m-d">03-12</div>
-        <div class="title">
-          <a href="/2023/03/12/%E4%BD%BF%E7%94%A8MAA%E8%BF%9E%E6%8E%A5%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%88%B7%E5%8F%96%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%B4%BB%E5%8A%A8/">
-            <span>使用MAA连接安卓手机自动刷取明日方舟活动</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="GitHub_Pages部署Hexo（一）">
-        <div class="time-m-d">12-30</div>
-        <div class="title">
-          <a href="/2022/12/30/GitHub_Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%B8%80%EF%BC%89/">
-            <span>GitHub_Pages部署Hexo（一）</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%8D%8E%E4%B8%BA%E6%9D%80%E5%90%8E%E5%8F%B0"><span class="toc-text">1 华为杀后台</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%90%8E%E5%8F%B0%E5%AE%BD%E5%AE%B9"><span class="toc-text">1.1 后台宽容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E4%BF%9D%E6%8C%81%E5%89%8D%E5%8F%B0%E8%BF%90%E8%A1%8C"><span class="toc-text">1.2 保持前台运行</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%AE%89%E5%8D%93VNC%E8%BD%AF%E4%BB%B6"><span class="toc-text">2 安卓VNC软件</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="Windows软件快速下载">
-        <div class="time-m-d">12-28</div>
-        <div class="title">
-          <a href="/2022/12/28/Windows%E8%BD%AF%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD/">
-            <span>Windows软件快速下载</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -484,6 +533,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%85%B3%E4%BA%8E%E5%9C%A8%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E4%B8%8ATermux%E7%9A%84%E4%B8%80%E4%BA%9B%E9%A2%9D%E5%A4%96%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D + '&url=' + http%3A%2F%2Frouv.top%2F2023%2F05%2F27%2F%25E5%2585%25B3%25E4%25BA%258E%25E5%259C%25A8%25E5%258D%258E%25E4%25B8%25BA%25E6%2589%258B%25E6%259C%25BA%25E4%25B8%258ATermux%25E7%259A%2584%25E4%25B8%2580%25E4%25BA%259B%25E9%25A2%259D%25E5%25A4%2596%25E2%2580%259C%25E4%25BC%2598%25E5%258C%2596%25E2%2580%259D%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://rouv.top/2023/05/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E4%B8%8ATermux%E7%9A%84%E4%B8%80%E4%BA%9B%E9%A2%9D%E5%A4%96%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

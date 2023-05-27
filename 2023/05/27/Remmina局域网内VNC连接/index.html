@@ -11,7 +11,7 @@
   
   <title>
     
-      Archives 
+      Remmina局域网内VNC连接 
       
       
       |
@@ -109,102 +109,181 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">Remmina局域网内VNC连接</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-05-27 22:09:37
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Termux/" title="Termux">
+                    #Termux
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/VNC/" title="VNC">
+                    #VNC
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="Remmina局域网内VNC连接"><a href="#Remmina局域网内VNC连接" class="headerlink" title="Remmina局域网内VNC连接"></a>Remmina局域网内VNC连接</h1><blockquote>
+<p>说明：Ubuntu 20.04.4 LTS使用Remmina连接手机上Termux搭建的VNC</p>
+</blockquote>
+<h2 id="一、Termux端配置"><a href="#一、Termux端配置" class="headerlink" title="一、Termux端配置"></a>一、Termux端配置</h2><ol>
+<li>在termux中打开vnc；</li>
+<li>获取设备本地网络ip；</li>
+<li>查看vnc端口号。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查看网络信息</span><br><span class="line">$ ifconfig</span><br></pre></td></tr></table></figure>
+
+<img src="https://s2.loli.net/2023/05/27/OD6Vu8jZkep3miM.jpg" alt="Screenshot_20220430_160533.jpg" style="zoom:67%;" />
+*如图，ip为：192.168.43.131*
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查看端口信息</span><br><span class="line">$ netstat</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://s2.loli.net/2023/05/27/aX9DwWoJB68NQCG.jpg" alt="Screenshot_20220430_162206.jpg" style="zoom:67%;" />
+*如图，端口为:5901*
+~~大概率为5901~~
+
+<h2 id="二、桌面端配置"><a href="#二、桌面端配置" class="headerlink" title="二、桌面端配置"></a>二、桌面端配置</h2><p>打开Remmina软件，点击新建项目：<br><img src="https://s2.loli.net/2023/05/27/P8U6hTcgsEL2RHA.png" alt="2022-04-30_09-32.png"></p>
+<p>切换项目类型，以<code>ip</code>加<code>:</code>再加<code>端口号</code>的形式填入地址，填入VNC账号密码，选择画质：<br><img src="https://s2.loli.net/2023/05/27/ehM7TA5FG6OIUlB.png" alt="2022-04-30_09-38.png"></p>
+<p>保存并连接，success！</p>
+<p><img src="https://s2.loli.net/2023/05/27/SNrhKOJxDi76APW.png" alt="2022-04-30 09-43.png"></p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/05/27/%E6%97%A7%E6%9C%BA%E8%8D%A3%E8%80%809%E6%8A%98%E8%85%BE%E4%B9%8Btermux%E5%AE%9E%E7%8E%B0archLinux/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-05-27 22:09:37
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Termux/" title="Termux">
+                        #Termux
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/VNC/" title="VNC">
+                        #VNC
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2023/05/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E4%B8%8ATermux%E7%9A%84%E4%B8%80%E4%BA%9B%E9%A2%9D%E5%A4%96%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
         </div>
       
-      <div class="post-item" title="关于在华为手机上Termux的一些额外“优化”">
-        <div class="time-m-d">05-27</div>
-        <div class="title">
-          <a href="/2023/05/27/%E5%85%B3%E4%BA%8E%E5%9C%A8%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E4%B8%8ATermux%E7%9A%84%E4%B8%80%E4%BA%9B%E9%A2%9D%E5%A4%96%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D/">
-            <span>关于在华为手机上Termux的一些额外“优化”</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="Remmina局域网内VNC连接">
-        <div class="time-m-d">05-27</div>
-        <div class="title">
-          <a href="/2023/05/27/Remmina%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85VNC%E8%BF%9E%E6%8E%A5/">
-            <span>Remmina局域网内VNC连接</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="旧机荣耀9折腾之termux实现archLinux">
-        <div class="time-m-d">05-27</div>
-        <div class="title">
-          <a href="/2023/05/27/%E6%97%A7%E6%9C%BA%E8%8D%A3%E8%80%809%E6%8A%98%E8%85%BE%E4%B9%8Btermux%E5%AE%9E%E7%8E%B0archLinux/">
-            <span>旧机荣耀9折腾之termux实现archLinux</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="GitHub_Pages部署Hexo（二）">
-        <div class="time-m-d">05-08</div>
-        <div class="title">
-          <a href="/2023/05/08/GitHub-Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/">
-            <span>GitHub_Pages部署Hexo（二）</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">05-07</div>
-        <div class="title">
-          <a href="/2023/05/07/hello-world/">
-            <span>Hello World</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="使用MAA连接安卓手机自动刷取明日方舟活动">
-        <div class="time-m-d">03-12</div>
-        <div class="title">
-          <a href="/2023/03/12/%E4%BD%BF%E7%94%A8MAA%E8%BF%9E%E6%8E%A5%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%88%B7%E5%8F%96%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%B4%BB%E5%8A%A8/">
-            <span>使用MAA连接安卓手机自动刷取明日方舟活动</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="GitHub_Pages部署Hexo（一）">
-        <div class="time-m-d">12-30</div>
-        <div class="title">
-          <a href="/2022/12/30/GitHub_Pages%E9%83%A8%E7%BD%B2Hexo%EF%BC%88%E4%B8%80%EF%BC%89/">
-            <span>GitHub_Pages部署Hexo（一）</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Remmina%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85VNC%E8%BF%9E%E6%8E%A5"><span class="toc-text">Remmina局域网内VNC连接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Termux%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="toc-text">一、Termux端配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A1%8C%E9%9D%A2%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="toc-text">二、桌面端配置</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="Windows软件快速下载">
-        <div class="time-m-d">12-28</div>
-        <div class="title">
-          <a href="/2022/12/28/Windows%E8%BD%AF%E4%BB%B6%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD/">
-            <span>Windows软件快速下载</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -484,6 +563,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Remmina%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85VNC%E8%BF%9E%E6%8E%A5 + '&url=' + http%3A%2F%2Frouv.top%2F2023%2F05%2F27%2FRemmina%25E5%25B1%2580%25E5%259F%259F%25E7%25BD%2591%25E5%2586%2585VNC%25E8%25BF%259E%25E6%258E%25A5%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://rouv.top/2023/05/27/Remmina%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85VNC%E8%BF%9E%E6%8E%A5/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
